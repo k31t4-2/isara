@@ -692,7 +692,7 @@ iframe {
 }
 
 .engineer {
-  background: url(/img/engineer.jpg);
+  background: url(engineer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
