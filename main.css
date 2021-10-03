@@ -915,7 +915,7 @@ iframe {
 }
 
 .members {
-  background: url(/img/members-bg.jpg);
+  background: url(members-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
