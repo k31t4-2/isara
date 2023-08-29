@@ -1,0 +1,22 @@
+
+.learn{
+
+  .wrapper{
+    padding: 65px 40px 55px;
+  }
+
+  &__txt{
+    font-weight: 300;
+    margin-top: 30px;
+
+    @include mq("sp"){
+    }
+  }
+
+  .images{
+
+    @include mq(){
+      margin: 10px auto;
+    }
+  }
+}

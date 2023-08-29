@@ -1,0 +1,123 @@
+
+.flow{
+
+  .wrapper{
+
+  }
+
+  // flow__img
+  &__img{
+    margin-top: 50px;
+  }
+
+  &__lists{
+    margin-top: 50px;
+  }
+
+  &__connect{
+
+    @include mq("sp"){
+      display: none;
+    }
+  }
+
+
+  // list-item
+  &__item{
+    background-color: $base-sub-bg;
+    align-items: baseline;
+    // justify-content: space-around;
+    padding: 30px 45px;
+    border-radius: 8px;
+
+    @include mq("sp"){
+      display: block;
+      margin-top: 18px;
+      padding: 14px;
+    }
+
+
+
+
+    // left-item
+    figure{
+      width: 15%;
+      position: relative;
+
+      @include mq("sp"){
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      img{
+
+        @include mq("sp"){
+
+          height: 40px;
+          width: 40px;
+          margin-right: 20px;
+        }
+      }
+
+      figcaption{
+        text-align: center;
+
+        &::after{
+          content: "";
+          position: absolute;
+          right: 25px;
+          top: 31%;
+          transition: all 0.2s ease-in-out;
+          display: block;
+          width: 12px;
+          height: 12px;
+          // carretに必要な線を指定
+          border-top: solid 2px #e5e5e5;
+          border-right: solid 2px #e5e5e5;
+          // 要素を回転させて、CSSでcarretを作成
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+
+          // openというクラスが付与されたらcarretを回転させる
+          .open{
+            &::after{
+              transform: rotate(-45deg);
+              top: 45%;
+            }
+        }
+
+
+
+        @include mq("sp"){
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+
+  }
+
+  // right-item
+  .item{
+    &__description{
+      width: 82%;
+      margin-left: 20px;
+
+      @include mq("sp"){
+        display: none;
+        width: 100%;
+        margin: 20px 0 0;
+        font-weight: 100;
+      }
+    }
+
+    &__txt{
+      text-align: left;
+    }
+  }
+
+
+}

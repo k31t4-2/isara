@@ -1,0 +1,58 @@
+
+.members{
+  background: url(/img/members-bg.jpg);
+  @include setting-bg;
+  color: $color-w;
+
+  .wrapper{
+    padding: 90px 30px 30px;
+
+    @include sp-padding-side;
+  }
+
+  .card{
+    padding-top: 200px;
+    justify-content: space-around;
+
+    @include mq("sp"){
+      display: block;
+    }
+
+    &__item{
+      background-color: transparent;
+      border: solid #fff;
+      border-width: 3px;
+      padding: 50px 35px;
+      width: calc(100% / 3 - 10px);
+
+      position: relative;
+
+      @include mq("sp"){
+        width: 100%;
+
+        &:not(:first-child){
+          margin-top: 200px;
+        }
+      }
+
+      img{
+        border-radius: 50%;
+        width: 200px;
+        position: absolute;
+        top: -150px;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+      }
+
+
+
+    }
+
+  }
+
+  .txtXS{
+    font-weight: 100;
+    line-height: 2;
+  }
+}

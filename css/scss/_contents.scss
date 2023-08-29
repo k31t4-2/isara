@@ -1,0 +1,66 @@
+
+.contents{
+  background-image: url(/img/contents.jpg);
+  @include setting-bg;
+
+  .wrapper{
+    max-width: 900px;
+    padding: 60px 30px 90px;
+
+    @include sp-padding-side;
+  }
+
+  .mainTitle{
+    letter-spacing: .2rem;
+  }
+
+  &__txt{
+    color: $color-w;
+    font-weight: normal;
+    margin-top: 15px;
+  }
+
+  &__lists{
+    justify-content: center;
+    align-items: start;
+
+    @include mq("sp"){
+      display: block;
+    }
+  }
+
+  &__list{
+    margin: 50px 10px;
+    border: 2px solid $base-blue;
+    border-radius: 3px;
+    width: 375px;
+
+    @include mq("sp"){
+      // display: block;
+      width: 100%;
+      margin: 40px auto 0px;
+    }
+  }
+
+
+  &__ttl{
+    background-color: $base-blue;
+    color: $color-w;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    letter-spacing: .2rem;
+  }
+
+  &__item{
+    background-color: $color-w;
+    color: $color-b;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    border-top: 1px dotted #e5e5e5;
+
+    @include mq("sp"){
+      padding: 14px 0px;
+    }
+  }
+
+}

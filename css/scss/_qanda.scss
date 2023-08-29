@@ -1,0 +1,96 @@
+
+// question --------------------
+// -----------------------------
+
+.question{
+  background-color: $base-bg;
+  position: relative;
+
+  .wrapper{
+    max-width: 900px;
+    padding: 30px;
+
+    @include mq("sp"){
+      padding: 15px;
+    }
+  }
+
+  .borderTitle{
+    @extend .borderTitle;
+    color: $color-w;
+
+    &::before,&::after{
+      border-color: $color-w;
+    }
+  }
+
+  .qanda{
+    background-color: $color-w;
+    color: $color-g;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 0 auto;
+    line-height: 80px;
+    font-weight: 100;
+  }
+
+  &::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 25px solid transparent  ;
+    border-top-color: $base-bg;
+    top: 100%;
+    left: 50%;
+    margin-left: -25px;
+  }
+}
+
+
+// answer-----------------------
+// -----------------------------
+
+.answer{
+  .wrapper{
+    max-width: 900px;
+    padding: 50px 30px 60px;
+
+    @include sp-padding-side;
+  }
+
+  &__txt{
+    font-weight: 100;
+    margin-top: 15px;
+  }
+
+  .card{
+    &__item{
+      width: 100%;
+      align-items: flex-start;
+
+      img{
+        width: 30%;
+        border: 3px solid $base-bg;
+      }
+    }
+
+    &__txt{
+      text-align: left;
+      width: 65%;
+      margin-left: auto;
+      margin-top: 0;
+      font-weight: 100;
+      padding-top: 20px;
+    }
+
+    &__name{
+      font-weight: 100;
+      text-decoration: underline;
+      font-size: 1.6rem;
+      letter-spacing: .2rem;
+    }
+  }
+}

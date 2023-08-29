@@ -1,0 +1,129 @@
+
+.benefits{
+  background-color: $base-bg;
+
+  .mainTitle{
+    color: $color-b;
+  }
+
+  &__txt{
+    margin-top: 50px;
+
+    .color{
+      color: $color-w;
+    }
+  }
+
+  &__contents{
+    border: 1px solid $color-w;
+    // border-top: none;
+    // position: relative;
+    padding: 60px 40px;
+    margin-top: 0;
+
+    @include mq("pc"){
+      margin-top: 70px;
+      padding: 45px 80px;
+    }
+  }
+
+  &__contentsTtl{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: $base-bg;
+
+    @include mq("pc"){
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: -100px;
+      margin-top: -50px;
+    }
+  }
+
+  .card{
+    justify-content: space-around;
+    display: none;
+
+    @include mq("pc"){
+      display: flex;
+    }
+
+    &__item{
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      margin-bottom: 0;
+
+      div{
+        height: 250px;
+        padding: 15px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+      &__ttl{
+        display: inline-block;
+        background-color: #fff;
+        color: $color-g;
+        font-weight: 100;
+        margin-bottom: 5px;
+      }
+
+      &__txt{
+        line-height: 2.6rem;
+        width: 100%;
+      }
+    }
+
+    .tbsp{
+      @include mq("pc"){
+        display: none;
+      }
+
+      &__item{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      &__ttl{
+        width: 30%;
+        margin-right: 5%;
+        p{
+          background-color: #fff;
+          color: $color-g;
+          border-radius: 50%;
+          margin: 0 auto;
+
+          @include mq("sp"){
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+          }
+
+          @include mq("tab"){
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+          }
+        }
+      }
+
+      &__txt{
+        width: 65%;
+
+        p{
+          color: $color-w;
+          text-align: left;
+        }
+      }
+
+    }
+
+}

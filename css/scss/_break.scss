@@ -1,0 +1,19 @@
+
+
+$breakpoints: (
+'sp': '(max-width: 768px)',
+'tab': '(min-width: 769px ) and (max-width: #{$wrapper-width})',
+'pc': '(min-width: #{$wrapper-width})'
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+// (記述例)
+// @include mq("sp"){
+//   display: block;
+// }

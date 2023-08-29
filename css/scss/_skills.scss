@@ -1,0 +1,77 @@
+
+.skills{
+  background-image: url(/img/skills.jpg);
+  @include  setting-bg;
+
+
+  .wrapper{
+    padding: 58px 40px 35px;
+  }
+
+  .mainTitle{
+    letter-spacing: .3rem;
+  }
+
+  &__txt{
+    margin-top: 17px;
+
+    p{
+      color: $color-w;
+      line-height: 2;
+      letter-spacing: .3rem;
+
+    }
+    .color-g{
+      color: $color-g;
+    }
+  }
+
+  .card{
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    // 元々flexになっているのでspにblockを指定するだけ
+
+    @include mq("pc"){
+      display: flex;
+    }
+
+    &__item{
+
+      // sp表示
+      padding: 30px;
+      border-radius: 5px;
+      width: 100%;
+
+      @include mq("pc"){
+        width: calc(100% / 3 - 10px * 2);
+        margin: 0 10px;
+      }
+
+      @include mq("tab"){
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+    }
+
+    &__ttl{
+
+    }
+
+    &__txt{
+      p{
+        margin-top: 25px;
+
+      }
+    }
+  }
+
+  .announce{
+
+    p{
+      letter-spacing: .3rem;
+    }
+  }
+}

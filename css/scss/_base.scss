@@ -1,0 +1,26 @@
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  color: #000000;
+  letter-spacing: .1rem;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 60px;
+  
+  @include mq("sp"){
+    padding-top: 48px;  // ヘッダー上部固定領域確保の為のpadding
+  }
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,41 @@
+
+.engineer{
+  background: url(/img/engineer.jpg);
+  @include setting-bg;
+
+  max-width: 100%;
+  height: auto;
+
+  position: relative;
+
+  .wrapper{
+    padding: 40px 40px 110px;
+    // @extend
+  }
+
+  &__txt{
+    margin: 25px 0px;
+    font-weight: 300;
+
+    p{
+      margin-bottom: 25px;
+    }
+  }
+
+  .about-head{
+    background-color: $base-bg;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    color: $color-w;
+    border-radius: 50px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -33px;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    font-weight: 100;
+  }
+}

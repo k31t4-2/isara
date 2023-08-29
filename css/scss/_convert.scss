@@ -1,0 +1,91 @@
+
+
+.convert{
+  background-color: $base-bg;
+
+  .wrapper{
+    padding: 35px 0px 45px;
+
+    @include mq("sp"){
+      padding: 9px 10px 45px;
+    }
+  }
+
+  &__ttl{
+    color: $color-w;
+    letter-spacing: .1rem;
+  }
+
+  &__alert{
+    margin-top: 20px;
+
+    span{
+      color: $color-r;
+      background-color: #fff;
+      font-weight: bold;
+    }
+  }
+
+  &__btn{
+    margin-top: 40px;
+    width: 88%;
+
+    @include mq("tab"){
+      margin-top: 20px;
+      width: 75%;
+    }
+
+
+
+    a{
+      display: block;
+      font-size: 2rem;
+
+      @include mq("pc"){
+        font-size: 2.6rem;
+        padding: 32px 0px;
+      }
+
+      @include mq("tab"){
+        padding: 20px 0px;
+      }
+
+      @include mq("sp"){
+        padding: 10px 0px;
+      }
+    }
+  }
+
+  &__deadline{
+
+    @include mq(pc){
+      margin-top: 68px;
+    }
+
+    margin-top: 35px;
+
+  }
+
+  &__txt{
+    color: $color-w;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-size: 110%;
+
+    &:not(:first-child){
+      margin-top: 37px;
+    }
+
+      @include mq("tab"){
+        margin-top: 20px;
+      }
+
+      @include mq("sp"){
+        margin-top: 20px;
+      }
+  }
+
+
+
+
+}

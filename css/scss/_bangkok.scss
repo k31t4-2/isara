@@ -1,0 +1,64 @@
+
+.bangkok{
+  background: url(/img/bangkokbg.jpg) no-repeat center;
+  // @include setting-bg;
+  background-size: cover;
+  color: $color-w;
+  text-align: left;
+
+  // @include mq("sp"){
+  //   text-align: center;
+  // }
+
+  .wrapper{
+    padding: 100px 0;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    @include mq("sp"){
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
+  }
+
+  .txtXS{
+    font-weight: 100;
+  }
+
+  &__ttl{
+
+    @include mq("sp"){
+      font-size: 2.6rem;
+      text-align: center;
+    }
+  }
+
+
+  &__txt{
+    margin-top: 15px;
+
+    @include mq("sp"){
+      text-align: center;
+    }
+  }
+
+  &__list{
+    margin-top: 15px;
+  }
+
+  &__item{
+    list-style-type: disc;
+    margin-left: 20px;
+
+    &:not(:first-child){
+      margin-top: 15px;
+    }
+  }
+
+  &__sub-ttl{
+    margin-top:30px;
+  }
+
+
+
+}

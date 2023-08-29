@@ -1,0 +1,290 @@
+
+
+@mixin sp-padding-side {
+    @include mq("sp"){
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+// card types ===========================================
+//  =====================================================
+
+
+// whiteArea ------------------------
+.whiteArea{
+  background-color: #fff;
+  border: 2px solid $base-bg;
+  margin-top: 35px;
+  padding: 30px;
+}
+
+.img__box{
+  // display: flex;
+  // justify-content: center;
+  // display: inline-block;
+
+  margin-top: 20px;
+  text-align: center;
+
+  .img__item{
+    padding: 10px;
+    display: inline-block;
+
+
+    figcaption{
+      font-weight: 300;
+      margin: 10px 0;
+    }
+  }
+}
+
+// card ------------------------
+
+.card{
+  width: 100%;
+  display: flex;
+
+  @include mq("sp"){
+    display: block;
+  }
+
+  &__item{
+    margin-bottom: 30px;
+    background-color: #fff;
+    // width: 70%;
+    // padding: 30px;
+    // border-radius: 5px;
+
+  }
+
+  &__ttl{
+    text-align: center;
+    color: $color-w;
+    background-color: $base-bg;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 5px;
+  }
+
+}
+
+// .img-box ----------------------------------------
+
+.images{
+  display: flex;
+  // justify-content: center;
+  max-width: 100%;
+  width: 860px;
+  margin: 50px auto;
+
+  &__list{
+    // display: inline-block;
+    width: 25%;
+    padding: 20px;
+
+      img{
+        max-width: 100%;
+        min-width: 100%;
+        width: 180px;
+        // height: 180px;
+
+      }
+    }
+  }
+
+
+  // card -----------------------------------------
+
+    // .cards{
+    //   display: flex;
+    // }
+
+
+
+// announce ===============================================
+//  =====================================================
+
+.announce{
+  background-color: $base-blue;
+  color: $color-w;
+  padding: 45px 0px;
+
+  .color-g{
+    color: $color-g;
+  }
+}
+
+
+// button ===============================================
+//  =====================================================
+
+.btn{
+  display: inline-block;
+  background-color: $base-bg-btn;
+  border-radius: 100px;
+  // padding は個別のaタグで設定
+  //    ------> divで設定すると、リンクの範囲が狭まる
+
+
+  &:hover{
+    cursor: pointer;
+    background-color: #D84940;
+  }
+
+  a{
+    color: $color-w;
+    font-weight: normal;
+    border-radius: 100px;
+  }
+}
+
+//  text transform ==================================
+//  =================================================
+
+@mixin border-ttl($border-color:$base-bg){
+  text-align: center;
+  letter-spacing: .3rem;
+  padding: 40px;
+  width: 860px;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+
+  &::before,&::after{
+    content: "";
+    display: block;
+    height: 50px;
+    width: 50px;
+    border:5px solid $border-color;
+    position: absolute;
+  }
+
+  &::before{
+    border-right: none;
+    border-bottom: none;
+    top: 7px;
+    left: 0;
+  }
+
+  &::after{
+    border-top: none;
+    border-left: none;
+    right: 0;
+    bottom: 12px;
+  }
+}
+
+.borderTitle{
+  @include border-ttl;
+}
+
+.underline{
+  font-weight: bold;
+
+  background: linear-gradient(transparent 70%,$base-bg 0%);
+}
+
+
+// text =================================================
+//  =====================================================
+
+.txtXS{
+  font-size: 1.4rem;
+
+}
+
+.txtS{
+  font-size: 1.6rem;
+}
+
+.txtM{
+  font-size: 1.8rem;
+
+  @include mq("sp"){
+    font-size: 1.6rem;
+  }
+
+}
+.txtL{
+  font-size: 2.6rem;
+
+  @include mq("tab"){
+    font-size: 2.2rem;
+  }
+
+  @include mq("sp"){
+    font-size: 2rem;
+  }
+}
+
+.brpc{
+  display: none;
+
+  @include mq("pc"){
+    display: block;
+  }
+}
+
+.brsp{
+  display: none;
+
+  @include mq("sp"){
+    display: inline-block;
+  }
+}
+
+// form =================================================
+//  =====================================================
+
+
+input,textarea{
+  display: block;
+}
+
+// bg-setting ===========================================
+//  =====================================================
+
+@mixin setting-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+// icon =================================================
+//  =====================================================
+
+.fa-question-circle{
+  color: #046da9;
+}
+
+.sns{
+  @extend .flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  // &__twitter{
+
+  // }
+}
+
+iframe{
+  vertical-align: center;
+}
+
+
+
+
+
+// -----------------------------------------------
+// My Rules -------------------------------------
+// -----------------------------------------------
+
+// ・単語の接続はセパレーターではなく、キャメルケースを使用。
+//  ---- >>> block__elementElement2_modifier
+// ・マルチクラスで設計
+//  ---- >>> modifier を生成する際は必ず元のクラス名を複製させてからkey_valueを付与
+// moduleのフォントサイズなどの個別設定はなし
+// クラス名から影響範囲がわかる指定をする
+//     ->fzの指定のみ。fw,lsの指定は個別で行う。
+// 細文字、太文字の場合は各CSSで行う。モジュールでは指定しない

@@ -1,0 +1,29 @@
+
+// txt-color ----------------
+
+$color-w: #fff;
+$color-b: #000000;
+$color-r: #c7254e;
+$color-g: #ebb94d;
+
+
+// background ---------------
+
+$base-bg: #ebb94d;
+$base-sub-bg: #fdf5e0;
+$base-blue: #046DA9;
+
+// btn ----------------------
+
+$base-bg-btn: #da6b64;
+
+
+.mainTitle{
+  color: #fff;
+  text-align: center;
+
+  &-b{
+    color: black;
+    text-align: center;
+  }
+}
