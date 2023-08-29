@@ -625,7 +625,7 @@ iframe {
 }
 
 .engineer {
-  background: url(/img/engineer.jpg);
+  background: url(../../img/engineer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -688,7 +688,7 @@ iframe {
 }
 
 .skills {
-  background-image: url(/img/skills.jpg);
+  background-image: url(../../img/skills.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -812,7 +812,7 @@ iframe {
 }
 
 .members {
-  background: url(/img/members-bg.jpg);
+  background: url(../../img/members-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -952,7 +952,7 @@ iframe {
 }
 
 .contents {
-  background-image: url(/img/contents.jpg);
+  background-image: url(../../img/contents.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1120,7 +1120,7 @@ iframe {
 }
 
 .bangkok {
-  background: url(/img/bangkokbg.jpg) no-repeat center;
+  background: url(../../img/bangkokbg.jpg) no-repeat center;
   background-size: cover;
   color: #fff;
   text-align: left;
@@ -1294,7 +1294,7 @@ iframe {
 }
 
 .value {
-  background-image: url(/img/value.jpg);
+  background-image: url(../../img/value.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
